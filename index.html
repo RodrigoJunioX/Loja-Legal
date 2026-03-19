@@ -6,22 +6,16 @@
   <title>Loja Legal | Em Breve</title>
   <meta
     name="description"
-    content="A Loja Legal é o marketplace oficial do ecossistema CNPJ Legal. Em breve, produtos e serviços com compra, venda e troca com pontos."
+    content="A Loja Legal é o marketplace do ecossistema CNPJ Legal. Em breve, produtos e serviços com compra, venda e troca com pontos."
   />
   <style>
     :root {
-      --bg-primary: #07203f;
-      --bg-secondary: #0b2d57;
-      --bg-card: rgba(255, 255, 255, 0.08);
-      --border-card: rgba(255, 255, 255, 0.12);
+      --bg-primary: #2840f5;
+      --bg-secondary: #1f35d6;
       --text-primary: #ffffff;
-      --text-secondary: rgba(255, 255, 255, 0.86);
+      --text-secondary: rgba(255, 255, 255, 0.92);
       --headline: #7fff3a;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
       --max-width: 1200px;
-      --radius-xl: 28px;
-      --radius-lg: 22px;
-      --radius-md: 18px;
     }
 
     * {
@@ -38,9 +32,9 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text-primary);
       background:
-        radial-gradient(circle at top, rgba(48, 111, 196, 0.35), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(0, 255, 140, 0.08), transparent 24%),
-        linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(127, 255, 58, 0.08), transparent 24%),
+        linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
       overflow-x: hidden;
     }
 
@@ -50,41 +44,12 @@
     }
 
     .page {
-      position: relative;
       width: 100%;
       overflow: hidden;
       padding: 28px 20px 52px;
     }
 
-    .page::before,
-    .page::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(90px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .page::before {
-      width: 260px;
-      height: 260px;
-      top: -60px;
-      left: -80px;
-      background: rgba(127, 255, 58, 0.12);
-    }
-
-    .page::after {
-      width: 320px;
-      height: 320px;
-      right: -120px;
-      bottom: 60px;
-      background: rgba(51, 118, 224, 0.18);
-    }
-
     .hero {
-      position: relative;
-      z-index: 1;
       max-width: var(--max-width);
       margin: 0 auto;
       display: flex;
@@ -95,18 +60,18 @@
     }
 
     .logo-wrap {
-      width: min(100%, 440px);
+      width: min(100%, 460px);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 4px;
+      padding-top: 6px;
     }
 
     .logo {
       width: min(100%, 360px);
       height: auto;
       object-fit: contain;
-      filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.22));
+      filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.18));
     }
 
     .hero-copy {
@@ -120,7 +85,7 @@
       font-size: 14px;
       letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.72);
+      color: rgba(255, 255, 255, 0.82);
     }
 
     h1 {
@@ -130,11 +95,11 @@
       font-weight: 800;
       letter-spacing: -0.04em;
       color: var(--headline);
-      text-shadow: 0 0 22px rgba(127, 255, 58, 0.14);
+      text-shadow: 0 0 22px rgba(127, 255, 58, 0.18);
     }
 
     .subheadline {
-      max-width: 920px;
+      max-width: 940px;
       margin: 22px auto 0;
       font-size: clamp(18px, 2.1vw, 25px);
       line-height: 1.6;
@@ -152,10 +117,8 @@
       align-items: center;
       gap: 10px;
       padding: 12px 18px;
-      background: rgba(255, 255, 255, 0.09);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.12);
       border-radius: 999px;
-      box-shadow: var(--shadow);
       color: #ffffff;
       font-size: 15px;
       font-weight: 700;
@@ -173,25 +136,15 @@
     }
 
     .showcase {
+      max-width: 1400px;
+      margin: 46px auto 0;
       position: relative;
-      z-index: 1;
-      max-width: var(--max-width);
-      margin: 44px auto 0;
     }
 
     .carousel-shell {
       position: relative;
       overflow: hidden;
-      border-radius: var(--radius-xl);
-      padding: 28px 0;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.07),
-        rgba(255, 255, 255, 0.03)
-      );
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
+      padding: 18px 0;
     }
 
     .carousel-shell::before,
@@ -200,8 +153,8 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 12%;
-      z-index: 3;
+      width: 14%;
+      z-index: 2;
       pointer-events: none;
     }
 
@@ -209,9 +162,9 @@
       left: 0;
       background: linear-gradient(
         90deg,
-        rgba(7, 32, 63, 1) 0%,
-        rgba(7, 32, 63, 0.85) 25%,
-        rgba(7, 32, 63, 0) 100%
+        rgba(40, 64, 245, 1) 0%,
+        rgba(40, 64, 245, 0.88) 28%,
+        rgba(40, 64, 245, 0) 100%
       );
     }
 
@@ -219,17 +172,17 @@
       right: 0;
       background: linear-gradient(
         270deg,
-        rgba(7, 32, 63, 1) 0%,
-        rgba(7, 32, 63, 0.85) 25%,
-        rgba(7, 32, 63, 0) 100%
+        rgba(40, 64, 245, 1) 0%,
+        rgba(40, 64, 245, 0.88) 28%,
+        rgba(40, 64, 245, 0) 100%
       );
     }
 
     .carousel-track {
       display: flex;
+      align-items: center;
+      gap: 26px;
       width: max-content;
-      gap: 20px;
-      padding: 4px 20px;
       animation: marquee 22s linear infinite;
       will-change: transform;
     }
@@ -239,53 +192,28 @@
     }
 
     .product-card {
-      position: relative;
       flex: 0 0 auto;
-      width: 260px;
-      height: 260px;
-      border-radius: var(--radius-lg);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06)),
-        rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--border-card);
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+      width: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
-      overflow: hidden;
-      opacity: 0.95;
-      transform: translateZ(0);
-    }
-
-    .product-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at top left, rgba(127, 255, 58, 0.09), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.07), transparent 30%);
-      pointer-events: none;
+      opacity: 0.98;
     }
 
     .product-card img {
-      position: relative;
-      z-index: 1;
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: contain;
-      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.18));
+      filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.16));
       user-select: none;
       -webkit-user-drag: none;
     }
 
     .footnote {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: 24px auto 0;
+      max-width: 920px;
+      margin: 26px auto 0;
       text-align: center;
-      color: rgba(255, 255, 255, 0.72);
+      color: rgba(255, 255, 255, 0.78);
       font-size: 15px;
       line-height: 1.6;
       padding: 0 12px;
@@ -296,7 +224,7 @@
         transform: translateX(0);
       }
       to {
-        transform: translateX(calc(-50% - 10px));
+        transform: translateX(calc(-50% - 13px));
       }
     }
 
@@ -309,17 +237,13 @@
         width: min(100%, 320px);
       }
 
-      .carousel-shell {
-        padding: 22px 0;
-      }
-
       .product-card {
         width: 220px;
-        height: 220px;
       }
 
       .carousel-track {
-        animation-duration: 20s;
+        gap: 22px;
+        animation-duration: 22s;
       }
     }
 
@@ -330,10 +254,6 @@
 
       .hero {
         gap: 22px;
-      }
-
-      .logo-wrap {
-        width: 100%;
       }
 
       .logo {
@@ -362,26 +282,20 @@
       }
 
       .carousel-shell {
-        border-radius: 22px;
-        padding: 18px 0;
+        padding: 10px 0;
       }
 
       .carousel-shell::before,
       .carousel-shell::after {
-        width: 14%;
+        width: 16%;
       }
 
       .carousel-track {
-        gap: 14px;
-        padding: 4px 14px;
-        animation-duration: 18s;
+        gap: 18px;
       }
 
       .product-card {
         width: 170px;
-        height: 170px;
-        padding: 14px;
-        border-radius: 18px;
       }
 
       .footnote {
@@ -406,11 +320,9 @@
       .subheadline {
         font-size: 15.5px;
         line-height: 1.7;
-        max-width: 100%;
       }
 
       .status-badge {
-        width: auto;
         max-width: 100%;
         font-size: 13px;
         line-height: 1.4;
@@ -420,25 +332,21 @@
         margin-top: 28px;
       }
 
-      .carousel-shell {
-        padding: 14px 0;
+      .carousel-shell::before,
+      .carousel-shell::after {
+        width: 18%;
       }
 
       .carousel-track {
-        gap: 12px;
-        padding: 4px 12px;
-        animation-duration: 16s;
+        gap: 14px;
       }
 
       .product-card {
-        width: 148px;
-        height: 148px;
-        padding: 12px;
+        width: 138px;
       }
 
       .footnote {
         font-size: 13px;
-        line-height: 1.6;
       }
     }
 
@@ -461,11 +369,11 @@
       </div>
 
       <div class="hero-copy">
-        <p class="eyebrow">Marketplace oficial em construção</p>
+        <p class="eyebrow">Marketplace em construção</p>
         <h1>Em Breve</h1>
 
         <p class="subheadline">
-          A <strong>Loja Legal</strong> é o marketplace oficial do embaixador e do cliente
+          A <strong>Loja Legal</strong> é o marketplace do embaixador e do cliente
           <strong>CNPJ Legal</strong>, criada para conectar nossa rede a produtos e serviços
           oferecidos pelos próprios clientes, com a possibilidade de <strong>Comprar</strong>,
           <strong>Vender</strong> e trocar com <strong>Pontos</strong>, fortalecendo negócios,
